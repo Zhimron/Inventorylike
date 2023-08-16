@@ -81,7 +81,7 @@ namespace Decent__
                         {
                             updatecmd.ExecuteNonQuery();
                             cmd.ExecuteNonQuery();
-                            MessageBox.Show("ADD SUCCESSFUL", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("OUT SUCCESSFUL", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (MySqlException ex)
                         {

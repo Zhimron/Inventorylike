@@ -24,13 +24,14 @@ namespace Decent__
 
         }
 
-        public Form2(string pCode, string product, string measure, string ins)
+        public Form2(string pCode, string product, string measure, string ins, string prc)
         {
             InitializeComponent();
             label1.Text = pCode;
             label2.Text = product;
             label3.Text = measure;
             label4.Text = ins;
+            lblprc.Text = prc;
         }
         void check(ref string measures, ref string products, ref string count)
         {
@@ -147,14 +148,28 @@ namespace Decent__
                     }
                     else
                     {//to update the master list if theres already a product in the system
-                        Qty = Qty + fvalue;
-                        string updatesql = "update from tbl_newmaster set qty=@qty where U_measure = '" + measures + "', product = '" + products + "'";
-                        MySqlCommand updatecmd = new MySqlCommand(updatesql, con);
-                        updatecmd.CommandType = CommandType.Text;
-                        updatecmd.Parameters.Add("@qty", MySqlDbType.Int32).Value = Qty;
-                        updatecmd.ExecuteNonQuery();
+                        Qty = Qty + newvalue;
+                        string updatesql = "UPDATE tbl_newmaster SET qty = @qty WHERE U_measure = @measure AND product = @product";
+                        using (MySqlCommand updatecmd = new MySqlCommand(updatesql, con))
+                        {
+                            updatecmd.CommandType = CommandType.Text;
+                            updatecmd.Parameters.AddWithValue("@qty", Qty);
+                            updatecmd.Parameters.AddWithValue("@measure", measures);
+                            updatecmd.Parameters.AddWithValue("@product", products);
+
+                            try
+                            {
+                                updatecmd.ExecuteNonQuery();
+                                //MessageBox.Show("Update Successful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (MySqlException ex)
+                            {
+                                MessageBox.Show("Update Unsuccessful\n" + ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+
                     }
-                  
+
 
                 }
                             
@@ -166,7 +181,7 @@ namespace Decent__
                 cmd2.Parameters.Add("@prod", MySqlDbType.VarChar).Value = label2.Text;
                 cmd2.Parameters.Add("@stock", MySqlDbType.Int32).Value = fvalue;
                 cmd2.Parameters.Add("@measure", MySqlDbType.VarChar).Value = "Box";
-                cmd2.Parameters.Add("@price", MySqlDbType.Int32).Value = txtprice.Text;
+                cmd2.Parameters.Add("@price", MySqlDbType.Int32).Value = lblprc.Text;
                 cmd2.Parameters.Add("@id", MySqlDbType.Int32).Value = label5.Text;
 
                 try
@@ -219,7 +234,7 @@ namespace Decent__
                         {
                             updatecmd.ExecuteNonQuery();
                             cmd.ExecuteNonQuery();
-                            MessageBox.Show("ADD SUCCESSFUL", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("OUT SUCCESSFUL", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (MySqlException ex)
                         {

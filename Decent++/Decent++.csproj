@@ -167,6 +167,12 @@
     <Compile Include="Ucin.Designer.cs">
       <DependentUpon>Ucin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcMaster.Designer.cs">
+      <DependentUpon>UcMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ucout.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ucin.resx">
       <DependentUpon>Ucin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcMaster.resx">
+      <DependentUpon>UcMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ucout.resx">
       <DependentUpon>Ucout.cs</DependentUpon>

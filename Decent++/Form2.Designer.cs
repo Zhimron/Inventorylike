@@ -56,6 +56,8 @@ namespace Decent__
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblprc = new System.Windows.Forms.Label();
             this.Portion.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -162,7 +164,7 @@ namespace Decent__
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(168, 167);
+            this.label5.Location = new System.Drawing.Point(432, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 19);
             this.label5.TabIndex = 7;
@@ -170,6 +172,8 @@ namespace Decent__
             // 
             // Portion
             // 
+            this.Portion.Controls.Add(this.label20);
+            this.Portion.Controls.Add(this.lblprc);
             this.Portion.Controls.Add(this.label6);
             this.Portion.Controls.Add(this.label11);
             this.Portion.Controls.Add(this.label12);
@@ -194,7 +198,7 @@ namespace Decent__
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 167);
+            this.label6.Location = new System.Drawing.Point(284, 24);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 19);
             this.label6.TabIndex = 12;
@@ -398,6 +402,26 @@ namespace Decent__
             this.label9.TabIndex = 10;
             this.label9.Text = "Unit measure";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(20, 173);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(92, 19);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Price box:";
+            // 
+            // lblprc
+            // 
+            this.lblprc.AutoSize = true;
+            this.lblprc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprc.Location = new System.Drawing.Point(168, 173);
+            this.lblprc.Name = "lblprc";
+            this.lblprc.Size = new System.Drawing.Size(50, 19);
+            this.lblprc.TabIndex = 13;
+            this.lblprc.Text = "Price";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -445,5 +469,7 @@ namespace Decent__
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblprc;
     }
 }

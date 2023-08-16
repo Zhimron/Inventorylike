@@ -49,7 +49,7 @@ namespace Decent__
             // 
             this.lbltransaction_id.AutoSize = true;
             this.lbltransaction_id.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltransaction_id.Location = new System.Drawing.Point(168, 24);
+            this.lbltransaction_id.Location = new System.Drawing.Point(186, 24);
             this.lbltransaction_id.Name = "lbltransaction_id";
             this.lbltransaction_id.Size = new System.Drawing.Size(106, 19);
             this.lbltransaction_id.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace Decent__
             // 
             this.lblcode.AutoSize = true;
             this.lblcode.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcode.Location = new System.Drawing.Point(168, 53);
+            this.lblcode.Location = new System.Drawing.Point(186, 53);
             this.lblcode.Name = "lblcode";
             this.lblcode.Size = new System.Drawing.Size(55, 19);
             this.lblcode.TabIndex = 4;
@@ -79,7 +79,7 @@ namespace Decent__
             // 
             this.lblprod.AutoSize = true;
             this.lblprod.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprod.Location = new System.Drawing.Point(168, 89);
+            this.lblprod.Location = new System.Drawing.Point(186, 89);
             this.lblprod.Name = "lblprod";
             this.lblprod.Size = new System.Drawing.Size(71, 19);
             this.lblprod.TabIndex = 5;
@@ -89,7 +89,7 @@ namespace Decent__
             // 
             this.lblmeasure.AutoSize = true;
             this.lblmeasure.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmeasure.Location = new System.Drawing.Point(168, 124);
+            this.lblmeasure.Location = new System.Drawing.Point(186, 124);
             this.lblmeasure.Name = "lblmeasure";
             this.lblmeasure.Size = new System.Drawing.Size(114, 19);
             this.lblmeasure.TabIndex = 6;
@@ -99,7 +99,7 @@ namespace Decent__
             // 
             this.lblstock.AutoSize = true;
             this.lblstock.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblstock.Location = new System.Drawing.Point(168, 157);
+            this.lblstock.Location = new System.Drawing.Point(186, 157);
             this.lblstock.Name = "lblstock";
             this.lblstock.Size = new System.Drawing.Size(54, 19);
             this.lblstock.TabIndex = 7;
@@ -175,7 +175,7 @@ namespace Decent__
             this.btnportioned.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnportioned.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnportioned.ForeColor = System.Drawing.Color.White;
-            this.btnportioned.Location = new System.Drawing.Point(557, 108);
+            this.btnportioned.Location = new System.Drawing.Point(557, 99);
             this.btnportioned.Name = "btnportioned";
             this.btnportioned.Size = new System.Drawing.Size(193, 56);
             this.btnportioned.TabIndex = 15;
@@ -196,7 +196,7 @@ namespace Decent__
             // 
             this.lblprc.AutoSize = true;
             this.lblprc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprc.Location = new System.Drawing.Point(169, 194);
+            this.lblprc.Location = new System.Drawing.Point(187, 194);
             this.lblprc.Name = "lblprc";
             this.lblprc.Size = new System.Drawing.Size(54, 19);
             this.lblprc.TabIndex = 17;
