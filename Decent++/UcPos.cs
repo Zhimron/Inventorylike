@@ -47,8 +47,7 @@ namespace Decent__
 
 
         private void dgv_sample_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+        {           
             if (e.ColumnIndex == 5)
             {
                 DataGridViewRow srow = dgv_sample.Rows[e.RowIndex];
@@ -72,6 +71,7 @@ namespace Decent__
                 Form3 newest = new Form3(pCode, product, measure, ins, prc);
                 newest.ShowDialog();
             }
+
         }
 
         private void UcPos_Load(object sender, EventArgs e)
@@ -165,6 +165,18 @@ namespace Decent__
                 }
             }
            
+        }
+
+        private void dgv_sample_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Check if a valid row was clicked
+            {
+                DataGridViewRow clickedRow = dgv_sample.Rows[e.RowIndex];
+
+               
+                var cellValue = clickedRow.Cells["ColumnName"].Value;
+                
+            }
         }
     }
 }
